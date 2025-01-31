@@ -68,7 +68,7 @@ TEMPLATE = """\
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorials</title>
+	<title>pgweb</title>
 </head>
  
 <body>
