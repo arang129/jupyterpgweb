@@ -7,7 +7,7 @@ from copy import copy
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-__version__ = '0.022'
+__version__ = '0.032'
 
 # This is the entry point for jupyter-server-proxy . The packaging metadata
 # tells it about this function. For details, see:
@@ -68,11 +68,21 @@ TEMPLATE = """\
 <!DOCTYPE html>
 <html>
 <head>
-	<title>pgweb</title>
+    <title>pgweb</title>
+    <link rel="icon" type="image/png" href="https://www.myqnap.org/wp-content/uploads/pgweb-logo.png">
+    
+    <style>
+        body {{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }}
+    </style>
 </head>
- 
 <body>
-<iframe src="https://jupyterpgweb.yunlab.app/" width="100%" height="870px" frameborder="0"></iframe>
+    <iframe src="https://jupyterpgweb.yunlab.app/" 
+            style="width: 100vw; height: 100vh; border: none;">
+    </iframe>
 </body>
 </html>
 """
